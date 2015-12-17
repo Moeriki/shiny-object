@@ -4,17 +4,11 @@ require('babel-polyfill')
 
 // vendor modules
 
-import chai, { expect } from 'chai'
-import sinon from 'sinon'
-import sinonChai from 'sinon-chai'
+import { expect } from 'chai'
 
 // modules
 
 import shiny from './index'
-
-// setup
-
-chai.use(sinonChai)
 
 // tests
 
@@ -166,28 +160,26 @@ describe('shiny', () => {
 
   it('should remove keys with a function', () => {
     // setup
-    const spy = sinon.spy()
-    const obj = { key: spy }
+    const noop = () => ({})
+    const obj = { key: noop }
 
     // test
     const shinyObj = shiny(obj)
 
     // verify
-    expect(spy).not.to.have.been.called
     expect(shinyObj).not.to.have.property('key')
   })
 
   it('should not remove keys with a function', () => {
     // setup
-    const spy = sinon.spy()
-    const obj = { key: spy }
+    const noop = () => ({})
+    const obj = { key: noop }
     const options = { allowFunctions: true }
 
     // test
     const shinyObj = shiny(obj, options)
 
     // verify
-    expect(spy).not.to.have.been.called
     expect(shinyObj).to.have.property('key')
   })
 
