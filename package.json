@@ -10,9 +10,6 @@
   },
   "author": "dieter@moeriki.com",
   "license": "ISC",
-  "dependencies": {
-    "o-shiny": "^0.1.6"
-  },
   "repository": "git@github.com:Moeriki/shiny-object.git",
   "devDependencies": {
     "babel-cli": "^6.3.17",
