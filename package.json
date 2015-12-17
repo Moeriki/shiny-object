@@ -1,7 +1,7 @@
 {
   "name": "shiny-object",
   "version": "0.9.0",
-  "description": "Iterate over nested array / object.",
+  "description": "Clean objects from your dirt.",
   "main": "es5/index.js",
   "scripts": {
     "build": "babel index.js --source-maps inline --out-file es5/index.js",
@@ -13,6 +13,7 @@
   "dependencies": {
     "o-shiny": "^0.1.6"
   },
+  "repository": "git@github.com:Moeriki/shiny-object.git",
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-eslint": "^5.0.0-beta6",
