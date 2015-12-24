@@ -100,7 +100,3 @@ function shiny(object, options = {}) {
 }
 
 export default shiny
-
-if (module && module.exports) {
-  module.exports = shiny
-}
