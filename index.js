@@ -7,27 +7,27 @@ const allowance = [
     isDirty: (val) => val === undefined,
   },
   {
-    id: 'Nulls',
+    id: 'Null',
     defaultValue: false,
     isDirty: (val) => val === null,
   },
   {
-    id: 'Functions',
+    id: 'Function',
     defaultValue: false,
     isDirty: (val) => typeof val === 'function',
   },
   {
-    id: 'EmptyStrings',
+    id: 'EmptyString',
     defaultValue: false,
     isDirty: (val) => val === '',
   },
   {
-    id: 'EmptyArrays',
+    id: 'EmptyArray',
     defaultValue: false,
     isDirty: (val) => Array.isArray(val) && val.length === 0,
   },
   {
-    id: 'EmptyObjects',
+    id: 'EmptyObject',
     defaultValue: false,
     isDirty: (val) =>
       val !== null &&
@@ -56,7 +56,7 @@ function shiny(object, options = {}) {
   }
 
   const allow = allowance.reduce((acc, rule) => {
-    const isAllowed = bool(options[`allow${rule.id}`], rule.defaultValue);
+    const isAllowed = !bool(options[`no${rule.id}`], rule.defaultValue);
     if (options.debug) {
       console.log(`${rule.id} is ${isAllowed ? 'allowed' : 'not allowed'}`);
     }
