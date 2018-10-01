@@ -3,6 +3,10 @@
   "version": "0.9.0",
   "description": "Clean objects from your dirt.",
   "main": "es5/index.js",
+  "files": [
+    "es5/",
+    "index.js"
+  ],
   "scripts": {
     "build": "babel index.js --source-maps inline --out-file es5/index.js",
     "prepublish": "npm run test && npm run build",
