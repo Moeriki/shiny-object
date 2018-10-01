@@ -9,7 +9,7 @@
     "test": "mocha --compilers js:babel-register test.js"
   },
   "author": "dieter@moeriki.com",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "git@github.com:Moeriki/shiny-object.git",
   "devDependencies": {
     "babel-cli": "^6.3.17",
