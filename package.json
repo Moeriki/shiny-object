@@ -1,6 +1,6 @@
 {
   "name": "shiny-object",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Clean objects from your dirt.",
   "main": "es5/index.js",
   "files": [
